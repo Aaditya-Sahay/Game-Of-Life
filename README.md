@@ -177,7 +177,8 @@ It is clear that we need some way to determine the number of alive cells in the 
 	We then use the value of **total** to determine the value of alive based on the rules discussed above. 
 	Since, the value of a cell remains unchanged if it is alive and has two or three alive neighbouring cells, we don't need to do anything for such a scenario.
 	We also want to trigger this update function before we show our cells. 
-	```show() {
+	```javascript
+	show() {
 	this.update();
         if (!this.alive) {
             fill(255)
