@@ -111,7 +111,7 @@ A quick tutorial on how to make your very own cellular automaton. For more infor
 	```javascript
 	function setup() {
 		//creating a canvas
-		createCanvas(801, 801);
+	    createCanvas(801, 801);
 		// calculating no of rows and columns. Floor gives us the greatest integer value.
 	    cols = floor(width / resolution);
 	    rows = floor(height / resolution);
@@ -176,6 +176,19 @@ It is clear that we need some way to determine the number of alive cells in the 
 	However, we need to also subtract the value of alive for the current cell we are checking for, as when the values of *l and m* are 0, we are actually pointing at the current cell for which we are running the update function.
 	We then use the value of **total** to determine the value of alive based on the rules discussed above. 
 	Since, the value of a cell remains unchanged if it is alive and has two or three alive neighbouring cells, we don't need to do anything for such a scenario.
+	We also want to trigger this update function before we show our cells. 
+	```show() {
+	this.update();
+        if (!this.alive) {
+            fill(255)
+            stroke(255)
+            rect(this.x, this.y, this.w, this.w);
+        } else {
+            fill(0)
+            stroke(0) 
+            rect(this.x, this.y, this.w, this.w);
+        }
+    }
 
 ### And we are done..
 Putting all of these pieces together should give us a working simulation of Conway's game of life.
