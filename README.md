@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18f24e2d-ded3-4053-88e9-38591cf44819/deploy-status)](gameoflife-tutorial.netlify.com)
+
 
 # Conway's Game of Life | Javascript
 A quick tutorial on how to make your very own cellular automaton. For more information about Game of life, you can click [here.](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
